@@ -11,8 +11,8 @@ dependencies:
         - pushd _deps ; if [ ! -d cmake-3.3.0-Linux-x86_64 ] ; then wget --no-check-certificate https://www.cmake.org/files/v3.3/cmake-3.3.0-Linux-x86_64.tar.gz ; tar xzf cmake-3.3.0-Linux-x86_64.tar.gz ; fi
         - pushd _deps ; if [ ! -d boost_1_58_0 ] ; then wget https://downloads.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.bz2 ; tar xjf boost_1_58_0.tar.bz2 ; fi
         - pushd _deps ; git clone https://github.com/PacificBiosciences/htslib.git
-        - pushd _deps ; git clone -b smrtanalysis-3.1.0 https://github.com/PacificBiosciences/pbbam.git
-        - pushd _deps ; git clone -b smrtanalysis-3.1.0 https://github.com/PacificBiosciences/ConsensusCore2.git
+        - pushd _deps ; git clone -b smrtanalysis-3.1.1 https://github.com/PacificBiosciences/pbbam.git
+        - pushd _deps ; git clone -b smrtanalysis-3.1.1 https://github.com/PacificBiosciences/ConsensusCore2.git
         - pushd _deps ; git clone https://github.com/PacificBiosciences/seqan.git
         - pip install --upgrade pip
         - pip install numpy
