@@ -479,6 +479,7 @@ int main(int argc, char** argv)
     {
         string modelPath(options.get(OptionNames::ModelPath));
         if (!modelPath.empty()) {
+            PBLOG_INFO << "Loading model parameters from: '" << modelPath << "'";
             if (!PacBio::Consensus::LoadModels(modelPath)) {
                 PBLOG_FATAL << "Failed to load models from: " << modelPath;
                 exit(-1);
@@ -500,6 +501,7 @@ int main(int argc, char** argv)
         set<string> used;
         string modelSpec(options.get(OptionNames::ModelSpec));
         if (!modelSpec.empty()) {
+            PBLOG_INFO << "Overriding model selection with: '" << modelSpec << "'";
             if (!(PacBio::Consensus::OverrideModel(modelSpec) && used.insert(modelSpec).second)) {
                 PBLOG_FATAL << "Failed to find specified model: " << modelSpec;
                 exit(-1);
